@@ -10,7 +10,7 @@ This is an Android Application which manages your Expenses in a very easy and ef
      <td>SignUp Activity</td>
   </tr>
   <tr>
-    <td><img src="/Images/Splashscreen.jpg" width=270 height=480></td>
+    <td><img src="/Images/Splashscreen.jpg" width=270 height=520></td>
     <td><img src="/Images/Login.jpg" width=270 height=520></td>
     <td><img src="/Images/Signup.jpg" width=270 height=520></td>
   </tr>
