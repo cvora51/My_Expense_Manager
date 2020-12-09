@@ -1,6 +1,6 @@
 # MY_EXPENSE_MANAGER
 
-This is an Android Application which manages your Expenses in a very easy and efficient manner. The app is designed with a very user friendly UI. The App is designed as a part of Mini Project under **Android Application Development Lab.**
+This is an Android Application which manages your Expenses in a very easy and efficient manner. The app is designed with a very user friendly UI.
 
 # ScreenShots:
  <table>
