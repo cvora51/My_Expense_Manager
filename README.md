@@ -18,23 +18,23 @@ This is an Android Application which manages your Expenses in a very easy and ef
 
  <table>
   <tr>
-    <td>Dashboard</td>
-     <td>New Income Addition</td>
-  </tr>
-  <tr>
-    <td><img src="/Images/Dashboard.jpg" width=270 height=520></td>
-    <td><img src="/Images/AddIncome.jpg" width=270 height=520></td>
-  </tr>
- </table>
-
- <table>
-  <tr>
     <td>Account Details</td>
     <td>Menu</td>
   </tr>
   <tr>
     <td><img src="/Images/Account.jpg" width=270 height=520></td>
     <td><img src="/Images/Menu.jpg" width=270 height=520></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Dashboard</td>
+     <td>New Income Addition</td>
+  </tr>
+  <tr>
+    <td><img src="/Images/Dashboard.jpg" width=270 height=520></td>
+    <td><img src="/Images/AddIncome.jpg" width=270 height=520></td>
   </tr>
  </table>
 
