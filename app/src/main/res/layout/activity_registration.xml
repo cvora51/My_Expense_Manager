@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context=".RegistrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGNUP"
+                android:padding="15dp"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceLarge"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Email-ID:"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:padding="15dp"
+                android:id="@+id/email_signup"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Password:"
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_background"
+                android:padding="15dp"
+                android:id="@+id/password_signup"
+                />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Register"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/white"
+                android:textColor="#4ca1af"
+                android:padding="15dp"
+                android:id="@+id/btn_signup"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="Already have an account? Click here"
+                android:padding="5dp"
+                android:id="@+id/login"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

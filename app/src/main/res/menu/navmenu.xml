@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group1">
+        <item android:id="@+id/dashboard"
+            android:title="DASHBOARD"
+            android:icon="@drawable/dashboard"/>
+
+        <item android:id="@+id/income"
+            android:title="INCOME"
+            android:icon="@drawable/income"/>
+
+        <item android:id="@+id/expense"
+            android:title="EXPENSE"
+            android:icon="@drawable/expense"/>
+    </group>
+    <group android:id="@+id/group3">
+        <item android:id="@+id/account"
+            android:title="ACCOUNT"
+            android:icon="@drawable/account"/>
+    </group>
+
+    <group android:id="@+id/group2">
+        <item android:id="@+id/logout"
+            android:title="LOGOUT"
+            android:icon="@drawable/logout"/>
+    </group>
+</menu>
