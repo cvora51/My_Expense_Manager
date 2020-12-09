@@ -11,8 +11,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
   </tr>
   <tr>
     <td><img src="/Images/Splashscreen.jpg" width=270 height=480></td>
-    <td><img src="/Images/Login.jpg" width=270 height=480></td>
-    <td><img src="/Images/Signup.jpg" width=270 height=480></td>
+    <td><img src="/Images/Login.jpg" width=270 height=520></td>
+    <td><img src="/Images/Signup.jpg" width=270 height=520></td>
   </tr>
  </table>
 
@@ -22,8 +22,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
      <td>Insert New Income Data</td>
   </tr>
   <tr>
-    <td><img src="/Images/Dashboard.jpg" width=270 height=480></td>
-    <td><img src="/Images/AddIncome.jpg" width=270 height=480></td>
+    <td><img src="/Images/Dashboard.jpg" width=270 height=520></td>
+    <td><img src="/Images/AddIncome.jpg" width=270 height=520></td>
   </tr>
  </table>
 
@@ -33,8 +33,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
     <td>Menu</td>
   </tr>
   <tr>
-    <td><img src="/Images/Account.jpg" width=270 height=480></td>
-    <td><img src="/Images/Menu.jpg" width=270 height=480></td>
+    <td><img src="/Images/Account.jpg" width=270 height=520></td>
+    <td><img src="/Images/Menu.jpg" width=270 height=520></td>
   </tr>
  </table>
 
@@ -44,8 +44,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
     <td>Update or Delete Income Transaction</td>
   </tr>
   <tr>
-    <td><img src="/Images/incomefragment.jpg" width=270 height=480 ></td>
-    <td><img src="/Images/income.jpg" width=270 height=480></td>
+    <td><img src="/Images/incomefragment.jpg" width=270 height=520 ></td>
+    <td><img src="/Images/income.jpg" width=270 height=520></td>
   </tr>
  </table>
 
@@ -55,8 +55,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
     <td>Update or Delete Expense Transaction</td>
   </tr>
   <tr>
-    <td><img src="/Images/expensefragment.jpg" width=270 height=480 ></td>
-    <td><img src="/Images/expense.jpg" width=270 height=480></td>
+    <td><img src="/Images/expensefragment.jpg" width=270 height=520 ></td>
+    <td><img src="/Images/expense.jpg" width=270 height=520></td>
   </tr>
  </table>
 
