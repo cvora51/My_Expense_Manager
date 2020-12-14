@@ -21,9 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".HomeActivity" android:noHistory="true"/>
+        <activity android:name=".ResetPasswordActivity" android:noHistory="true"/>
+        <activity android:name=".RegistrationActivity" android:noHistory="true"/>
         <activity android:name=".MainActivity"
             android:noHistory="true"></activity>
     </application>

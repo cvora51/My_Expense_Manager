@@ -16,6 +16,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -109,9 +110,15 @@ public class MainActivity extends AppCompatActivity {
                     mEmail.setError("Email Required!");
                     return;
                 }
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    mEmail.setError("Please enter a valid email");
+                }
                 if(TextUtils.isEmpty(pass)){
                     mPass.setError("Password Required!");
                     return;
+                }
+                if(pass.length()<8){
+                    mPass.setError("Minimum 8 characters required");
                 }
 
                 dialog.setMessage("Processing..");
@@ -151,7 +158,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
+//    @Override
+//    public void onBackPressed() {
+//        MainActivity.super.onBackPressed();
+//    }
+
+        @Override
     public void onBackPressed() {
 
         new AlertDialog.Builder(MainActivity.this)
@@ -165,8 +177,8 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("NO",null)
                 .show();
-        moveTaskToBack(true);
-        finish();
+//        moveTaskToBack(true);
+//        finish();
     }
 
     private void convertToAddress(Location location) {

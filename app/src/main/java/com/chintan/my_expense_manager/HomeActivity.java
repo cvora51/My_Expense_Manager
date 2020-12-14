@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -108,9 +110,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if(drawerLayout.isDrawerOpen(GravityCompat.END)){
             drawerLayout.closeDrawer(GravityCompat.END);
         }
-        else{
-            super.onBackPressed();
-        }
+        new AlertDialog.Builder(HomeActivity.this)
+                .setTitle("Warning")
+                .setMessage("Do you wish to exit")
+                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HomeActivity.super.onBackPressed();
+                    }
+                })
+                .setNegativeButton("NO",null)
+                .show();
+//        else{
+//            super.onBackPressed();
+//        }
 
     }
 
