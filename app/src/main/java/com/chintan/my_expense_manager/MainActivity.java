@@ -3,11 +3,18 @@ package com.chintan.my_expense_manager;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,24 +22,64 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.io.IOException;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText mEmail,mPass;
     private Button btn_login;
-    private TextView txt_forgot_pass, txt_signup;
+    private TextView txt_forgot_pass, txt_signup, loca;
     private ProgressDialog dialog;
     private FirebaseAuth mAuth;
+    FusedLocationProviderClient client;
+    LocationRequest request;
+    LocationCallback callback;
+    Location location;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        client = LocationServices.getFusedLocationProviderClient(getApplicationContext());
+        request = new LocationRequest();
+        request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        request.setInterval(4000);
+        request.setFastestInterval(2000);
+        callback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                location = locationResult.getLocations().get(0);
+                String Loc1 = "location:" + " , " + location.getLatitude() + " , " + location.getLongitude();
+                loca = findViewById(R.id.location1);
+                loca.setText(Loc1);
+                convertToAddress(location);
+                super.onLocationResult(locationResult);
+            }
+        };
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        client.requestLocationUpdates(request, callback, Looper.myLooper());
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -120,5 +167,21 @@ public class MainActivity extends AppCompatActivity {
                 .show();
         moveTaskToBack(true);
         finish();
+    }
+
+    private void convertToAddress(Location location) {
+        Geocoder geocoder = new Geocoder(getApplicationContext());
+        List<Address> lAds = null;
+        try {
+            lAds = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+            Address ad = lAds.get(0);
+
+            String Add_1 = "Connected From: " + ad.getSubLocality();
+            loca.setText(Add_1);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

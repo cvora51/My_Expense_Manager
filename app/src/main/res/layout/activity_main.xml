@@ -85,6 +85,16 @@
                 android:padding="15dp"
                 android:id="@+id/signup"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Connected from: ..."
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:id="@+id/location1"
+                />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
