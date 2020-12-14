@@ -1,13 +1,13 @@
 # MY_EXPENSE_MANAGER
 
-This is an Android Application which manages your Expenses in a very easy and efficient manner. The app is designed with a very user friendly UI. The App is designed as a part of Mini Project under **Android Application Development Lab.**
+This is an Android Application which manages your Expenses in a very easy and efficient manner. The app is designed with a very user friendly UI.
 
 # ScreenShots:
  <table>
   <tr>
-    <td>Splash Screen</td>
-     <td>Login Activity</td>
-     <td>SignUp Activity</td>
+    <td>SplashScreen</td>
+     <td>Login Page</td>
+     <td>Registration Page</td>
   </tr>
   <tr>
     <td><img src="/Images/Splashscreen.jpg" width=270 height=520></td>
@@ -18,18 +18,7 @@ This is an Android Application which manages your Expenses in a very easy and ef
 
  <table>
   <tr>
-    <td>Dashboard Fragment</td>
-     <td>Insert New Income Data</td>
-  </tr>
-  <tr>
-    <td><img src="/Images/Dashboard.jpg" width=270 height=520></td>
-    <td><img src="/Images/AddIncome.jpg" width=270 height=520></td>
-  </tr>
- </table>
-
- <table>
-  <tr>
-    <td>Account Information</td>
+    <td>Account Details</td>
     <td>Menu</td>
   </tr>
   <tr>
@@ -40,8 +29,19 @@ This is an Android Application which manages your Expenses in a very easy and ef
 
  <table>
   <tr>
-    <td>Income Fragment</td>
-    <td>Update or Delete Income Transaction</td>
+    <td>Dashboard</td>
+     <td>New Income Addition</td>
+  </tr>
+  <tr>
+    <td><img src="/Images/Dashboard.jpg" width=270 height=520></td>
+    <td><img src="/Images/AddIncome.jpg" width=270 height=520></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Income Page</td>
+    <td>Update or Delete Income </td>
   </tr>
   <tr>
     <td><img src="/Images/incomefragment.jpg" width=270 height=520 ></td>
@@ -51,8 +51,8 @@ This is an Android Application which manages your Expenses in a very easy and ef
 
  <table>
   <tr>
-    <td>Expense Fragment</td>
-    <td>Update or Delete Expense Transaction</td>
+    <td>Expense Page</td>
+    <td>Update or Delete Expense</td>
   </tr>
   <tr>
     <td><img src="/Images/expensefragment.jpg" width=270 height=520 ></td>
